@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log( print('Today is %1 %2.%3.%4','Monday',10,8,2021))
+        function print(template, ...params){
+            for (let i = 1; i<= params.length; i++){
+                let str = '%' + i;
+                template = template.replace (str, params [i-1]);
+            }
+            return template;
+        }
+    </script>
+</body>
+</html>
